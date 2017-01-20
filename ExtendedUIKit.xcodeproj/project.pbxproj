@@ -24,9 +24,12 @@
 		33B7628F1E328A2A0083099F /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7627F1E328A1A0083099F /* UIScreen.swift */; };
 		33B762901E328A2A0083099F /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762801E328A1A0083099F /* UIScrollView.swift */; };
 		33B762911E328A2A0083099F /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762811E328A1A0083099F /* UITableView.swift */; };
+		5AEE2A626BA66C5649F54DB5 /* Pods_ExtendedUIKit_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EAB81E584B45A5CC644DEE2 /* Pods_ExtendedUIKit_iOS.framework */; };
+		B0CC0ECF27409FD543805B45 /* Pods_ExtendedUIKit_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBB722C457995C99C90B626 /* Pods_ExtendedUIKit_watchOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		218B42910BE8BB0F301858D5 /* Pods-ExtendedUIKit watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUIKit watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUIKit watchOS/Pods-ExtendedUIKit watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		33B762411E3283C20083099F /* ExtendedUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtendedUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B7624E1E3284C60083099F /* ExtendedUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedUIKit.h; sourceTree = "<group>"; };
 		33B7624F1E3284C60083099F /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -43,6 +46,11 @@
 		33B7627F1E328A1A0083099F /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		33B762801E328A1A0083099F /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		33B762811E328A1A0083099F /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		35014485F607FCC522172DDD /* Pods-ExtendedUIKit iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUIKit iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUIKit iOS/Pods-ExtendedUIKit iOS.release.xcconfig"; sourceTree = "<group>"; };
+		55C5ADBA3C3943266AABC63A /* Pods-ExtendedUIKit watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUIKit watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUIKit watchOS/Pods-ExtendedUIKit watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6EAB81E584B45A5CC644DEE2 /* Pods_ExtendedUIKit_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtendedUIKit_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8621CAC6664EB47427267C20 /* Pods-ExtendedUIKit iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUIKit iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUIKit iOS/Pods-ExtendedUIKit iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8EBB722C457995C99C90B626 /* Pods_ExtendedUIKit_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExtendedUIKit_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEE2A626BA66C5649F54DB5 /* Pods_ExtendedUIKit_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0CC0ECF27409FD543805B45 /* Pods_ExtendedUIKit_watchOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +78,8 @@
 			children = (
 				33B7624C1E3284C60083099F /* Sources */,
 				33B762421E3283C20083099F /* Products */,
+				FF546A20F004A3110F07EBF5 /* Pods */,
+				EC93BADA10D2824B925356E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +161,26 @@
 			path = watchOS;
 			sourceTree = "<group>";
 		};
+		EC93BADA10D2824B925356E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EAB81E584B45A5CC644DEE2 /* Pods_ExtendedUIKit_iOS.framework */,
+				8EBB722C457995C99C90B626 /* Pods_ExtendedUIKit_watchOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF546A20F004A3110F07EBF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8621CAC6664EB47427267C20 /* Pods-ExtendedUIKit iOS.debug.xcconfig */,
+				35014485F607FCC522172DDD /* Pods-ExtendedUIKit iOS.release.xcconfig */,
+				55C5ADBA3C3943266AABC63A /* Pods-ExtendedUIKit watchOS.debug.xcconfig */,
+				218B42910BE8BB0F301858D5 /* Pods-ExtendedUIKit watchOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -175,10 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33B762491E3283C20083099F /* Build configuration list for PBXNativeTarget "ExtendedUIKit iOS" */;
 			buildPhases = (
+				532CC72A572EFC19197A0733 /* [CP] Check Pods Manifest.lock */,
 				33B7623C1E3283C20083099F /* Sources */,
 				33B7623D1E3283C20083099F /* Frameworks */,
 				33B7623E1E3283C20083099F /* Headers */,
 				33B7623F1E3283C20083099F /* Resources */,
+				F303801BC7007711AF5B7384 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,10 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33B7625C1E3285180083099F /* Build configuration list for PBXNativeTarget "ExtendedUIKit watchOS" */;
 			buildPhases = (
+				7968EBF60045977C1D4D44AE /* [CP] Check Pods Manifest.lock */,
 				33B762521E3285180083099F /* Sources */,
 				33B762531E3285180083099F /* Frameworks */,
 				33B762541E3285180083099F /* Headers */,
 				33B762551E3285180083099F /* Resources */,
+				FB07DC60F8E80BAE092E2FA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +298,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		532CC72A572EFC19197A0733 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7968EBF60045977C1D4D44AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F303801BC7007711AF5B7384 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExtendedUIKit iOS/Pods-ExtendedUIKit iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB07DC60F8E80BAE092E2FA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExtendedUIKit watchOS/Pods-ExtendedUIKit watchOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33B7623C1E3283C20083099F /* Sources */ = {
@@ -397,6 +496,7 @@
 		};
 		33B7624A1E3283C20083099F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8621CAC6664EB47427267C20 /* Pods-ExtendedUIKit iOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -417,6 +517,7 @@
 		};
 		33B7624B1E3283C20083099F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35014485F607FCC522172DDD /* Pods-ExtendedUIKit iOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -437,6 +538,7 @@
 		};
 		33B7625D1E3285180083099F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C5ADBA3C3943266AABC63A /* Pods-ExtendedUIKit watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -460,6 +562,7 @@
 		};
 		33B7625E1E3285180083099F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218B42910BE8BB0F301858D5 /* Pods-ExtendedUIKit watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";

@@ -10,7 +10,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
 
-  s.source_files  = "Sources/**/*.{h,swift}"
+  s.source_files  = "Sources/Support Files/**/*.{h,swift}", "Sources/Common/**/*.swift"
+  s.ios.source_files = "Sources/iOS/**/*.swift"
+  s.watchOS.source_files = "Sources/watchOS/**/*.swift"
+
   s.requires_arc = true
-  s.dependencies =
+  s.dependency 'ExtendedFoundation'
+  s.dependency 'ExtendedCoreGraphics'
 end
