@@ -5,6 +5,7 @@
 
 Protocols and extensions for the UIKit framework.
 
+Includes both the [ExtendedFoundation](https://github.com/daniel-barros/ExtendedFoundation) and [ExtendedCoreGraphics](https://github.com/daniel-barros/ExtendedCoreGraphics) frameworks (via dependencies if using CocoaPods, otherwise you have to include them yourself).
 
 ## Installation
 
