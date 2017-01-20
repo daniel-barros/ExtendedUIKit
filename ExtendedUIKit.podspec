@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "Sources/Support Files/**/*.{h,swift}", "Sources/Common/**/*.swift"
   s.ios.source_files = "Sources/iOS/**/*.swift"
-  s.watchOS.source_files = "Sources/watchOS/**/*.swift"
+  s.watchos.source_files = "Sources/watchOS/**/*.swift"
 
   s.requires_arc = true
   s.dependency 'ExtendedFoundation'
