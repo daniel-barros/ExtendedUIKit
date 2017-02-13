@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ExtendedUIKit"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "Extensions for the UIKit framework."
   s.homepage     = "https://github.com/daniel-barros/ExtendedUIKit"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }

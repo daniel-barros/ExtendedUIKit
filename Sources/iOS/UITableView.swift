@@ -28,8 +28,8 @@ import UIKit
 
 public extension UITableView {
     
-    func dequeueReusableCell<T>(for indexPath: IndexPath) -> T? where T: Reusable {
-        return dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T
+    func dequeueReusableCell<T>(for indexPath: IndexPath) -> T where T: Reusable {
+        return dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as! T
     }
     
     func register<T>(headerFooterViewClass: T.Type) where T: AnyObject, T: Reusable {
