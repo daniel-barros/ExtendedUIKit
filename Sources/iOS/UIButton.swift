@@ -60,7 +60,7 @@ public extension UIButton {
     }
     
     
-    func performClosureAction() {
+    @objc func performClosureAction() {
         guard let targetClosure = targetClosure else { return }
         targetClosure(self)
     }

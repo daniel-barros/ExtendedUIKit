@@ -40,16 +40,16 @@ public extension String {
         
         var attributes: [String: AnyObject] = [:]
         
-        attributes[NSFontAttributeName] =? font
+        attributes[NSAttributedStringKey.font] =? font
         
-        attributes[NSForegroundColorAttributeName] =? color
+        attributes[NSAttributedStringKey.foregroundColor] =? color
         
         if lineSpacing != nil || paragraphSpacing != nil || lineBreakMode != nil {
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.paragraphSpacing =? paragraphSpacing
             paragraphStyle.lineBreakMode =? lineBreakMode
             paragraphStyle.lineSpacing =? lineSpacing
-            attributes[NSParagraphStyleAttributeName] = paragraphStyle
+            attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
         }
         
         return NSAttributedString(string: self, attributes: attributes)
