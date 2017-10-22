@@ -60,7 +60,6 @@ public extension UITableView {
         }
     }
     
-    
     /// Updates its rows height with animation.
     func reloadRowHeights() {
         beginUpdates()
