@@ -39,9 +39,7 @@ public extension String {
               lineBreakMode: NSLineBreakMode? = nil) -> NSAttributedString {
         
         var attributes: [NSAttributedStringKey: Any] = [:]
-        
         attributes[.font] =? font
-        
         attributes[.foregroundColor] =? color
         
         if lineSpacing != nil || paragraphSpacing != nil || lineBreakMode != nil {
