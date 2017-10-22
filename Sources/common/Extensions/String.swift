@@ -38,18 +38,18 @@ public extension String {
               paragraphSpacing: CGFloat? = nil,
               lineBreakMode: NSLineBreakMode? = nil) -> NSAttributedString {
         
-        var attributes: [String: AnyObject] = [:]
+        var attributes: [NSAttributedStringKey: Any] = [:]
         
-        attributes[NSAttributedStringKey.font] =? font
+        attributes[.font] =? font
         
-        attributes[NSAttributedStringKey.foregroundColor] =? color
+        attributes[.foregroundColor] =? color
         
         if lineSpacing != nil || paragraphSpacing != nil || lineBreakMode != nil {
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.paragraphSpacing =? paragraphSpacing
             paragraphStyle.lineBreakMode =? lineBreakMode
             paragraphStyle.lineSpacing =? lineSpacing
-            attributes[NSAttributedStringKey.paragraphStyle] = paragraphStyle
+            attributes[.paragraphStyle] = paragraphStyle
         }
         
         return NSAttributedString(string: self, attributes: attributes)
