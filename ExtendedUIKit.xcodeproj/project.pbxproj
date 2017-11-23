@@ -134,13 +134,28 @@
 		33B762771E328A1A0083099F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				33B762781E328A1A0083099F /* Floatable.swift */,
 				33B762791E328A1A0083099F /* Reusable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
 		33B7627A1E328A1A0083099F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				33DA7DCF1FC75C1000A18CC1 /* Extensions */,
+				33DA7DD01FC75C1E00A18CC1 /* Protocols */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		33B762821E328A1A0083099F /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		33DA7DCF1FC75C1000A18CC1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				33B7627B1E328A1A0083099F /* Notification.swift */,
@@ -151,14 +166,15 @@
 				33B762801E328A1A0083099F /* UIScrollView.swift */,
 				33B762811E328A1A0083099F /* UITableView.swift */,
 			);
-			path = iOS;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		33B762821E328A1A0083099F /* watchOS */ = {
+		33DA7DD01FC75C1E00A18CC1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				33B762781E328A1A0083099F /* Floatable.swift */,
 			);
-			path = watchOS;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		EC93BADA10D2824B925356E3 /* Frameworks */ = {
