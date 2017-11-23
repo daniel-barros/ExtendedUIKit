@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		335F12901FC7720800ADB9F1 /* LayoutEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335F128F1FC7720800ADB9F1 /* LayoutEdges.swift */; };
 		33B762501E3284C60083099F /* ExtendedUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B7624E1E3284C60083099F /* ExtendedUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33B7626E1E3285840083099F /* ExtendedUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B7624E1E3284C60083099F /* ExtendedUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33B762831E328A220083099F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B762751E328A1A0083099F /* String.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		218B42910BE8BB0F301858D5 /* Pods-ExtendedUIKit watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUIKit watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUIKit watchOS/Pods-ExtendedUIKit watchOS.release.xcconfig"; sourceTree = "<group>"; };
+		335F128F1FC7720800ADB9F1 /* LayoutEdges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutEdges.swift; sourceTree = "<group>"; };
 		33B762411E3283C20083099F /* ExtendedUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtendedUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B7624E1E3284C60083099F /* ExtendedUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedUIKit.h; sourceTree = "<group>"; };
 		33B7624F1E3284C60083099F /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		335F12911FC7721600ADB9F1 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				335F128F1FC7720800ADB9F1 /* LayoutEdges.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		33B762371E3283C20083099F = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 			children = (
 				33DA7DCF1FC75C1000A18CC1 /* Extensions */,
 				33DA7DD01FC75C1E00A18CC1 /* Protocols */,
+				335F12911FC7721600ADB9F1 /* Types */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -396,6 +407,7 @@
 				33B7628D1E328A2A0083099F /* UIFont.swift in Sources */,
 				33B7628F1E328A2A0083099F /* UIScreen.swift in Sources */,
 				33B762901E328A2A0083099F /* UIScrollView.swift in Sources */,
+				335F12901FC7720800ADB9F1 /* LayoutEdges.swift in Sources */,
 				33B762841E328A220083099F /* UIColor.swift in Sources */,
 				33B762911E328A2A0083099F /* UITableView.swift in Sources */,
 				33B762871E328A250083099F /* Floatable.swift in Sources */,
