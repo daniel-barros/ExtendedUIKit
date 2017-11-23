@@ -23,6 +23,7 @@ extension UILayoutGuide: EdgeAnchorable {}
 /// Example:
 ///
 ///     NSLayoutConstraint.activate(view.edgesAnchor.constraint(equalTo: view.safeAreaLayoutGuide.edgesAnchor))
+@available(iOS 11.0, *)
 open class LayoutEdges {
     
     private let subject: EdgeAnchorable
@@ -47,6 +48,7 @@ open class LayoutEdges {
     }
 }
 
+@available(iOS 11.0, *)
 public extension UIView {
     /// A layout anchor representing the top, leading, bottom and trailing edges of the view's frame.
     var edgesAnchor: LayoutEdges {
@@ -54,6 +56,7 @@ public extension UIView {
     }
 }
 
+@available(iOS 11.0, *)
 public extension UILayoutGuide {
     /// A layout anchor representing the top, leading, bottom and trailing edges of the layout guide's frame.
     var edgesAnchor: LayoutEdges {
