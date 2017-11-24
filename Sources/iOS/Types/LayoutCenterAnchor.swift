@@ -26,12 +26,6 @@ open class LayoutCenterAnchor {
     
     private let subject: CenterAnchorable
     
-    /// Returns an array of constraints that define the centerX and centerY anchors position equal to another ones.
-    /// - returns: Array containing constraints in this order: centerX, centerY.
-    open func constraint(equalTo anchor: LayoutCenterAnchor) -> [NSLayoutConstraint] {
-        return constraint(equalTo: anchor, offsetX: 0, offsetY: 0)
-    }
-    
     /// Returns an array of constraints that define the centerX and centerY anchors position equal to another ones with an offset.
     /// - returns: Array containing constraints in this order: centerX, centerY.
     open func constraint(equalTo anchor: LayoutCenterAnchor, offsetX: CGFloat = 0, offsetY: CGFloat = 0) -> [NSLayoutConstraint] {
