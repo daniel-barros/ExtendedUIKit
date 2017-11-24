@@ -34,8 +34,11 @@ public extension Notification {
         
         init(notification: Notification) { self.notification = notification }
         
-        var keyboardHeight: CGFloat? {
-            return (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height
+        @available(*, unavailable, message: "Use keyboardFrame instead.")
+        var keyboardHeight: CGFloat? { fatalError("\(#function) is obsolete.") }
+        
+        var keyboardFrameEnd: CGRect? {
+            return (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         }
         
         var keyboardAnimationDuration: Double? {
