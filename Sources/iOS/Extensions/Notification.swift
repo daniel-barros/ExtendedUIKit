@@ -29,7 +29,9 @@ import UIKit
 public extension Notification {
     
     struct ProcessedInfo {
+        
         private let notification: Notification
+        
         init(notification: Notification) { self.notification = notification }
         
         var keyboardHeight: CGFloat? {

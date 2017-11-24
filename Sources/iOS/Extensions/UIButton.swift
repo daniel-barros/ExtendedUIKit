@@ -29,7 +29,9 @@ import UIKit
 public extension UIButton {
     
     private class ClosureWrapper: NSObject {
+        
         let closure: (UIButton) -> ()
+        
         init(_ closure: @escaping (UIButton) -> ()) {
             self.closure = closure
         }
