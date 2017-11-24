@@ -30,9 +30,9 @@ public extension UIButton {
     
     private class ClosureWrapper: NSObject {
         
-        let closure: (UIButton) -> ()
+        let closure: (UIButton) -> Void
         
-        init(_ closure: @escaping (UIButton) -> ()) {
+        init(_ closure: @escaping (UIButton) -> Void) {
             self.closure = closure
         }
     }
@@ -43,7 +43,7 @@ public extension UIButton {
     }
     
     
-    private var targetClosure: ((UIButton) -> ())? {
+    private var targetClosure: ((UIButton) -> Void)? {
         get {
             guard let closureWrapper = objc_getAssociatedObject(self, &AssociatedKeys.targetClosure) as? ClosureWrapper else { return nil }
             return closureWrapper.closure
@@ -56,7 +56,7 @@ public extension UIButton {
     
     
     /// - warning: Uses Objective-C functions.
-    func addAction(_ closure: @escaping (UIButton) -> ()) {
+    func addAction(_ closure: @escaping (UIButton) -> Void) {
         targetClosure = closure
         addTarget(self, action: #selector(UIButton.performClosureAction), for: .touchUpInside)
     }
