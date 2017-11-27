@@ -26,10 +26,10 @@
 
 import Foundation
 
-// Use this for reusable table view cells.
-// Check out UITableView's dequeueReusableCell(for:).
+/// Use this for reusable table view cells.
+/// Check out UITableView's dequeueReusableCell(for:).
 public protocol Reusable {
-    /// The class' name by default.
+    /// By default the name of the class.
     static var reuseIdentifier: String { get }
 }
 

@@ -32,22 +32,29 @@ public extension Notification {
         
         private let notification: Notification
         
-        init(notification: Notification) { self.notification = notification }
-        
-        @available(*, unavailable, message: "Use keyboardFrame instead.")
-        var keyboardHeight: CGFloat? { fatalError("\(#function) is obsolete.") }
-        
-        var keyboardFrameEnd: CGRect? {
-            return (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-        }
-        
-        var keyboardAnimationDuration: Double? {
-            return (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
+        fileprivate init(notification: Notification) {
+            self.notification = notification
         }
     }
     
     /// Provides access to the information in userInfo with a friendlier interface.
     var processedInfo: ProcessedInfo {
         return ProcessedInfo(notification: self)
+    }
+}
+
+// MARK: - Keyboard
+
+extension Notification.ProcessedInfo {
+    
+    @available(*, unavailable, message: "Use keyboardFrame instead.")
+    var keyboardHeight: CGFloat? { fatalError("\(#function) is obsolete.") }
+    
+    var keyboardFrameEnd: CGRect? {
+        return (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+    }
+    
+    var keyboardAnimationDuration: Double? {
+        return (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue
     }
 }

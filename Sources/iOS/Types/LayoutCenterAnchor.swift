@@ -16,6 +16,20 @@ protocol CenterAnchorable {
 extension UIView: CenterAnchorable {}
 extension UILayoutGuide: CenterAnchorable {}
 
+public extension UIView {
+    /// A layout anchor representing both the centerXAnchor and centerYAnchor.
+    var centerAnchor: LayoutCenterAnchor {
+        return LayoutCenterAnchor(of: self)
+    }
+}
+
+public extension UILayoutGuide {
+    /// A layout anchor representing both the centerXAnchor and centerYAnchor.
+    var centerAnchor: LayoutCenterAnchor {
+        return LayoutCenterAnchor(of: self)
+    }
+}
+
 /// A class for creating mutliple edge-based layout constraint objects in one line.
 ///
 /// Example:
@@ -34,19 +48,5 @@ open class LayoutCenterAnchor {
     
     fileprivate init(of object: CenterAnchorable) {
         self.subject = object
-    }
-}
-
-public extension UIView {
-    /// A layout anchor representing both the centerXAnchor and centerYAnchor.
-    var centerAnchor: LayoutCenterAnchor {
-        return LayoutCenterAnchor(of: self)
-    }
-}
-
-public extension UILayoutGuide {
-    /// A layout anchor representing both the centerXAnchor and centerYAnchor.
-    var centerAnchor: LayoutCenterAnchor {
-        return LayoutCenterAnchor(of: self)
     }
 }

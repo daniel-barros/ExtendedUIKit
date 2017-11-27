@@ -18,6 +18,22 @@ protocol EdgeAnchorable {
 extension UIView: EdgeAnchorable {}
 extension UILayoutGuide: EdgeAnchorable {}
 
+@available(iOS 11.0, *)
+public extension UIView {
+    /// A layout anchor representing the top, leading, bottom and trailing edges of the view's frame.
+    var edgesAnchor: LayoutEdgesAnchor {
+        return LayoutEdgesAnchor(of: self)
+    }
+}
+
+@available(iOS 11.0, *)
+public extension UILayoutGuide {
+    /// A layout anchor representing the top, leading, bottom and trailing edges of the layout guide's frame.
+    var edgesAnchor: LayoutEdgesAnchor {
+        return LayoutEdgesAnchor(of: self)
+    }
+}
+
 /// A class for creating mutliple edge-based layout constraint objects in one line.
 ///
 /// Example:
@@ -52,21 +68,5 @@ open class LayoutEdgesAnchor {
     
     fileprivate init(of object: EdgeAnchorable) {
         self.subject = object
-    }
-}
-
-@available(iOS 11.0, *)
-public extension UIView {
-    /// A layout anchor representing the top, leading, bottom and trailing edges of the view's frame.
-    var edgesAnchor: LayoutEdgesAnchor {
-        return LayoutEdgesAnchor(of: self)
-    }
-}
-
-@available(iOS 11.0, *)
-public extension UILayoutGuide {
-    /// A layout anchor representing the top, leading, bottom and trailing edges of the layout guide's frame.
-    var edgesAnchor: LayoutEdgesAnchor {
-        return LayoutEdgesAnchor(of: self)
     }
 }
