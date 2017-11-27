@@ -21,7 +21,6 @@ extension UILayoutGuide: CenterAnchorable {}
 /// Example:
 ///
 ///     NSLayoutConstraint.activate(view.centerAnchor.constraint(equalTo: view.centerAnchor))
-@available(iOS 11.0, *)
 open class LayoutCenterAnchor {
     
     private let subject: CenterAnchorable
@@ -38,7 +37,6 @@ open class LayoutCenterAnchor {
     }
 }
 
-@available(iOS 11.0, *)
 public extension UIView {
     /// A layout anchor representing both the centerXAnchor and centerYAnchor.
     var centerAnchor: LayoutCenterAnchor {
@@ -46,7 +44,6 @@ public extension UIView {
     }
 }
 
-@available(iOS 11.0, *)
 public extension UILayoutGuide {
     /// A layout anchor representing both the centerXAnchor and centerYAnchor.
     var centerAnchor: LayoutCenterAnchor {

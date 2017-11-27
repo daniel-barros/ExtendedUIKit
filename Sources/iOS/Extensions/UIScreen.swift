@@ -27,8 +27,13 @@
 import UIKit
 
 public extension UIScreen {
-    /// - returns: `true` if screen is smaller than iPhone 6
+    @available(*, deprecated:9.0, obsoleted:12.0, message: "Use isiPhoneSEOrPrevious instead.")
     var isSmalliPhone: Bool {
+        return isiPhoneSEOrPrevious
+    }
+    
+    /// - returns: `true` if screen is smaller than iPhone 6
+    var isiPhoneSEOrPrevious: Bool {
         return min(bounds.width, bounds.height) < 375
     }
     
