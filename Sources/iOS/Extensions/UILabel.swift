@@ -56,6 +56,58 @@ public extension UILabel {
             return heightForConstrainedNumberOfLines < unconstrainedHeight ||
                 heightForConstrainedNumberOfLines > maxHeight
         }
+    }
+    
+    /// The actual font size, even when it is adjusted to fit the label's width.
+    var adjustedFontSize: CGFloat {
+        guard let text = text else {
+            return font?.pointSize ?? 0
+        }
+        let attributedText = NSAttributedString(string: text, attributes: [.font: font])
+        let context = NSStringDrawingContext()
+        context.minimumScaleFactor = minimumScaleFactor
+        attributedText.boundingRect(with: frame.size, options: .usesLineFragmentOrigin, context: context)
+        return font.pointSize * context.actualScaleFactor
+    }
+    
+    /// Useful if you want a multiline label to display all its text while having the minimum width possible and filling the specified number of lines.
+    func minWidthWithoutTruncatingText(forExactNumberOfLines numberOfLines: Int, widthPrecission: CGFloat = 2, heightPrecission: CGFloat = 2, widthUpperBound: CGFloat = UIScreen.main.bounds.width, maxNumberOfIterations: Int = 100) -> CGFloat {
+        var text = "A"
+        for _ in 1..<numberOfLines {
+            text += "\nA"
+        }
+        let exampleTextHeight = (text as NSString).boundingRect(with: CGSize.greatestFiniteMagnitude,
+                                                                options: .usesLineFragmentOrigin,
+                                                                attributes: [.font: font],
+                                                                context: nil).height + 0.5
         
+        return minWidthWithoutTruncatingText(withOptimalHeight: exampleTextHeight, widthPrecission: widthPrecission, heightPrecission: heightPrecission, widthUpperBound: widthUpperBound, maxNumberOfIterations: maxNumberOfIterations)
+    }
+    
+    /// Useful if you want a multiline label to display all its text while having the minimum width possible and an arbitrary height.
+    /// It doesn't take into account the label's max number of lines, but the height you pass.
+    func minWidthWithoutTruncatingText(withOptimalHeight height: CGFloat, widthPrecission: CGFloat = 2, heightPrecission: CGFloat = 2, widthUpperBound: CGFloat = UIScreen.main.bounds.width, maxNumberOfIterations: Int = 100) -> CGFloat {
+        guard let text = text as NSString? else {
+            return 0
+        }
+        var upperBound = widthUpperBound
+        var lowerBound: CGFloat = 0
+        var width = upperBound * 2
+        var iterationCount = 0
+        repeat {
+            width = lowerBound + (upperBound - lowerBound) / 2
+            let size = text.boundingRect(with: CGSize(width: width, height: .greatestFiniteMagnitude),
+                                         options: .usesLineFragmentOrigin,
+                                         attributes: [.font: font],
+                                         context: nil).size
+            if size.height < height + heightPrecission {
+                upperBound = width
+            } else {
+                lowerBound = width
+            }
+            iterationCount += 1
+        } while abs(upperBound - lowerBound) > widthPrecission && iterationCount < maxNumberOfIterations
+        
+        return upperBound
     }
 }
